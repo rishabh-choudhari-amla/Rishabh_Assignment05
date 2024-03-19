@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "UserChoice";
+    FormsAuthentication.SignOut();
+    @*@Session["userLogin"] = null;*@
+}
+<style>
+    .card {
+        background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+    }
+</style>
+<body>
+    <section>
+        <div class="content">
+            <div class="d-flex justify-content-between">
+
+                <div class="card shadow-lg border p-2 m-5" >
+                    <img src="~/teacher1.png" class="card-img-top " style="max-width:350px ; height:250px" alt="teacher">
+                    <div class="card-body text-lg-center">
+                        <h5 class="card-title fw-bold">Admin</h5>
+                        <p class="card-text ">Teachers & Incharge</p>
+                        @Html.ActionLink("Admin", "UserLogin", "Login", null, new { @class = "btn btn-primary", role = "button" })
+                    </div>
+                </div>
+
+                <div class="card shadow-lg border p-2 m-5">
+                    <img src="~/student1.png"  class="card-img-top " style="max-width:350px ; height:250px" alt="student"/>
+                    <div class="card-body text-lg-center">
+                        <h5 class="card-title fw-bold">Student</h5>
+                        <p class="card-text ">Student & Parents</p>
+                        @Html.ActionLink("Student", "StudentSelect", "Result", null, new { @class = "btn btn-primary", role = "button" })
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+
+

@@ -1,0 +1,77 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-shadow: unset;
+    background-image: url("/img72.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+header {
+    background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+    font: bold;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: 36px;
+    box-shadow: unset;
+    border-radius: 7px;
+}
+
+.content {
+  /*  border-radius: 10px;
+    background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+    padding: 50px;
+    box-shadow: 0 20px 100px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    max-width: 500px;
+    justify-content: center;*/
+    width: 1000px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+    padding: 50px;
+    box-shadow: 0 20px 100px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    margin-top: 60px;
+    justify-content: center;
+}
+
+    .content form {
+        max-width: 600px;
+        margin: 0;
+        text-align: center;
+    }
+
+
+.content12 {
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+    border-radius: 25px;
+    max-width: 500px;
+    box-shadow: 0 20px 100px rgba(0, 0, 0, 0.5);
+}
+
+
+

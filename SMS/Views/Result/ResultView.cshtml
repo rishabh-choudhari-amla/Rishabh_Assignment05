@@ -1,0 +1,96 @@
+﻿@model SMS.Model.Models.ReportDetails
+
+@{
+    ViewBag.Title = "ResultView";
+}
+
+
+
+<div  class=" content">
+    <h2 class="text-center">Result View</h2>
+    <hr/>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.Id)
+    <dl class="dl-horizontal">
+
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4 ">
+                @Html.DisplayNameFor(model => model.Science)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Science)
+            </dd>
+        </div>
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4 ">
+                @Html.DisplayNameFor(model => model.EVS)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EVS)
+            </dd>
+        </div>
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4 ">
+                @Html.DisplayNameFor(model => model.Maths)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Maths)
+            </dd>
+        </div>
+
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4 ">
+                @Html.DisplayNameFor(model => model.English)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.English)
+            </dd>
+        </div>
+
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4 ">
+                @Html.DisplayNameFor(model => model.Hindi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Hindi)
+            </dd>
+        </div>
+
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4 ">
+                @Html.DisplayNameFor(model => model.Percentage)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Percentage)
+            </dd>
+        </div>
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4 ">
+                @Html.DisplayNameFor(model => model.Result)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Result)
+            </dd>
+        </div>
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4 ">
+                @Html.DisplayNameFor(model => model.Remark)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Remark)
+            </dd>
+        </div>
+    </dl>
+</div>
+@*<p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@

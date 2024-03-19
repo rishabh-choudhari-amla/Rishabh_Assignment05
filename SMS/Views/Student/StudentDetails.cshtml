@@ -1,0 +1,103 @@
+﻿@model SMS.Model.StudentDetails
+
+@{
+    ViewBag.Title = "StudentDetails";
+}
+
+<div class=" content">
+    <h2 class="text-center">Student Details</h2>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4 ">
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+        </div>
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4">
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+        </div>
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4">
+                @Html.DisplayNameFor(model => model.Standard)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Standard)
+            </dd>
+        </div>
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4">
+                @Html.DisplayNameFor(model => model.Gender)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Gender)
+            </dd>
+        </div>
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4">
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateOfBirth)
+            </dd>
+        </div>
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4">
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PhoneNumber)
+            </dd>
+        </div>
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+        </div>
+        <div class="d-flex flex-row ">
+            <dt class="offset-2 col-4">
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+        </div>
+        <div class="d-flex flex-row">
+            <dt class="offset-2 col-4">
+                @Html.DisplayNameFor(model => model.City)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.City)
+            </dd>
+
+        </div>
+        <div class="d-flex flex-row my-4">
+            <div class="offset-3 ">
+                @Html.ActionLink("Edit", "EditStudent", new { userid = Model.Id }, new { @class = "btn btn-primary" })
+            </div>
+            <div class="mx-4">
+                @Html.ActionLink("Back to List", "StudentList", null, new { @class = "btn btn-success" })
+            </div>
+        </div>
+    </dl>
+</div>

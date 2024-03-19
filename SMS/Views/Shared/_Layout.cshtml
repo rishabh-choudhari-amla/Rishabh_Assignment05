@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/school.ico" rel="shortcut icon" type="image/x-icon" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/scroller/2.4.0/js/scroller.jqueryui.js"></script>
+    <script src="https://cdn.datatables.net/scroller/2.4.0/js/dataTables.scroller.js"></script>
+    <script src="https://cdn.datatables.net/2.0.1/js/dataTables.jqueryui.js"></script>
+    <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+    <style>
+        .navbar {
+            background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light text-bg-light  shadow-u shadow-lg align-items-baseline h-25">
+        <div class="container">
+            <a href="">
+                <img src="~/school.ico" style="max-block-size: 40px "/>
+            </a>
+            &nbsp;&nbsp;
+            @Html.ActionLink("Student Management System", "UserChoice", "Home", new { area = "" }, new { @class = "navbar-brand  btn btn-group-vertical" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex">
+                <ul class="navbar-nav align-items-baseline">
+
+                    @if (Session["userLogin"] == null)
+                    {
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link  btn btn-group-vertical" })</li>
+                        <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link  btn btn-group-vertical" })</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link  btn btn-group-vertical" })</li>
+                    }
+                    @if (Session["userLogin"] != null)
+                    {
+                        <li>@Html.ActionLink("Registration", "AddStudent", "Student", null, new { @class = "nav-link btn btn-group-vertical" })</li>
+                        <li>@Html.ActionLink("ClassList", "ClassList", "Class", new { area = "" }, new { @class = "nav-link  btn btn-group-vertical" })</li>
+                        <li>@Html.ActionLink("Marks", "ReportClassList", "Class", new { area = "" }, new { @class = "nav-link btn btn-group-vertical" })</li>
+                        <li class="offset-lg-11">
+                            <img src="~/use.png" style="max-block-size: 35px " />
+                        </li>
+                        @*<li>Welcome&nbsp;&nbsp;</li>*@
+                        <li class="btn btn-group-vertical">Welcome&nbsp;&nbsp;@Session["userLogin"]&nbsp;&nbsp;</li>
+                        <li>@Html.ActionLink("Logout", "Index", "Home", new { area = "" }, new { @class = "btn btn-outline-danger " })</li>
+
+                    }
+                </ul>
+
+            </div>
+        </div>
+
+
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

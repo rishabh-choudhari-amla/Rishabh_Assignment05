@@ -1,0 +1,65 @@
+﻿@model SMS.Model.Models.ReportDetails
+
+@{
+    ViewBag.Title = "ReportDetails";
+}
+
+<h2>Result</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Physics)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Physics)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chemistry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chemistry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maths)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maths)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.English)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.English)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hindi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hindi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remark)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "ReportRollList")
+</p>
